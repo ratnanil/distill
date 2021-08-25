@@ -38,7 +38,11 @@ enumerate_collection <- function(site_dir, site_config, collection) {
   }
 
   # sort the articles in reverse-chronological order
-  indexes <- order(sapply(articles, function(x) x$metadata$date), decreasing = TRUE)
+  # indexes <- order(sapply(articles, function(x) x$metadata$date), decreasing = TRUE)
+
+  # sort the articles by their path
+  indexes <- order(sapply(articles, function(x) x$path))
+
   articles <- articles[indexes]
 
   # return collection
@@ -356,7 +360,10 @@ update_collection_listing <- function(site_dir, site_config, collection, article
   }
 
   # sort the articles in reverse-chronological order
-  indexes <- order(sapply(articles, function(x) as.Date(x$date)), decreasing = TRUE)
+  # indexes <- order(sapply(articles, function(x) as.Date(x$date)), decreasing = TRUE)
+
+  indexes <- order(sapply(articles, function(x) x$path))
+
   articles <- articles[indexes]
 
   # filter articles on path existing (in case of a rename)
