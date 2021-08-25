@@ -307,10 +307,10 @@ categories_listing_html <- function(articles) {
     tags$div(class = "sidebar-section categories",
       tags$h3("Categories"),
       tags$ul(
-        tags$li(
-          tags$a(href = category_hash(all_articles), all_articles),
-          tags$span(class = "category-count", sprintf("(%d)", length(articles)))
-        ),
+        # tags$li(
+        #   tags$a(href = category_hash(all_articles), all_articles),
+        #   tags$span(class = "category-count", sprintf("(%d)", length(articles)))
+        # ),
         lapply(names(categories), function(name) {
           tags$li(
             tags$a(href = category_hash(name), name),
