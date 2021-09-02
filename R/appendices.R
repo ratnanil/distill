@@ -9,9 +9,10 @@ appendices_after_body_html <- function(input_file, site_config, metadata) {
   # citation <- appendix_citation(site_config, metadata)
   appendix <- tags$div(class = "appendix-bottom",
                        references,
-                       updates_and_corrections,
-                       creative_commons,
-                       citation)
+                       # updates_and_corrections,
+                       creative_commons
+                       # citation
+                       )
 
   # wrap in placeholder
   placeholder_html("appendices", tagList(
