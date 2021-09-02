@@ -4,7 +4,7 @@ appendices_after_body_html <- function(input_file, site_config, metadata) {
 
   # write appendixes
   references <- appendix_bibliography(metadata)
-  updates_and_corrections <- appendix_updates_and_corrections(metadata)
+  # updates_and_corrections <- appendix_updates_and_corrections(metadata)
   creative_commons <- appendix_creative_commons(metadata)
   citation <- appendix_citation(site_config, metadata)
   appendix <- tags$div(class = "appendix-bottom",
