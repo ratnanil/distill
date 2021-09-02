@@ -305,7 +305,7 @@ categories_listing_html <- function(articles) {
 
     # generate html
     tags$div(class = "sidebar-section categories",
-      tags$h3("Categories"),
+      tags$h3("Themen"),
       tags$ul(
         # tags$li(
         #   tags$a(href = category_hash(all_articles), all_articles),
